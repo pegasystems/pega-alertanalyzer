@@ -1,16 +1,23 @@
 package com.pega.gsea.servlets;
 
+import com.pega.gsea.util.AlertAnalysis;
+import com.pega.gsea.util.AlertData;
+import com.pega.gsea.util.ParseAlertLog;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import static java.nio.charset.StandardCharsets.UTF_8;
+import java.util.Iterator;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.commons.fileupload.servlet.*;
-import org.apache.commons.fileupload.*;
-import org.apache.commons.fileupload.disk.*;
-import java.util.*;
-import java.io.*;
-import com.pega.gsea.util.*;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
 /**
  * Servlet implementation class for Servlet: AlertUpload
  *
@@ -28,6 +35,7 @@ import com.pega.gsea.util.*;
 	/* (non-Java-doc)
 	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+        @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}  	
@@ -35,6 +43,7 @@ import com.pega.gsea.util.*;
 	/* (non-Java-doc)
 	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+        @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try
@@ -60,7 +69,7 @@ import com.pega.gsea.util.*;
 			        boolean isInMemory = item.isInMemory();
 			        long sizeInBytes = item.getSize();
 			        InputStream uploadedStream = item.getInputStream();
-			        BufferedReader fr = new BufferedReader(new InputStreamReader(uploadedStream));
+			        BufferedReader fr = new BufferedReader(new InputStreamReader(uploadedStream, UTF_8));
 			        alerts = ParseAlertLog.getDataFromRawLog(fr);
 			        System.out.println("Total Memory "+Runtime.getRuntime().totalMemory());    
 			        System.out.println("Free Memory  "+Runtime.getRuntime().freeMemory());
