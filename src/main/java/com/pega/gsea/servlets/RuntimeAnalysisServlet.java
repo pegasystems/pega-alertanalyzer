@@ -5,20 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.List;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.PageContext;
-
-import org.apache.tomcat.util.codec.binary.Base64;
 
 import com.pega.gsea.util.AlertAnalysis;
 import com.pega.gsea.util.AlertData;
 import com.pega.gsea.util.ParseAlertLog;
+import com.sun.xml.internal.messaging.saaj.util.Base64;
 /**
  * Servlet implementation class for Servlet: AlertUpload
  *
@@ -71,7 +67,7 @@ import com.pega.gsea.util.ParseAlertLog;
 				
 
 				String authString = name + ":" + password;
-				byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
+				byte[] authEncBytes = Base64.encode(authString.getBytes());
 				String authStringEnc = new String(authEncBytes);
 				//System.out.println("Base64 encoded auth string: " + authStringEnc);
 				
