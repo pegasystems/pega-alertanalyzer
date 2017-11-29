@@ -86,7 +86,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 			    }
 			}
 			
-			if (alerts==null || alerts.size()==0)
+			if (alerts==null || alerts.isEmpty())
 			{
 				response.sendRedirect("UploadFile.jsp?ERROR=true");
 				return;

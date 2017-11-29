@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
@@ -159,7 +160,7 @@ import java.util.List;
                                     endDate = DateUtil.changeTimezone(endDate, analysis.getTimezone());
 
                             }
-                            catch (Exception e)
+                            catch (ParseException e)
                     {
                                     e.printStackTrace();
                     }
@@ -175,7 +176,7 @@ import java.util.List;
                                     startDate = df.parse(start); 
                                     endDate = df.parse(end);
                             }
-                            catch (Exception e)
+                            catch (ParseException e)
                     {
                                     e.printStackTrace();
                     }
