@@ -1,0 +1,96 @@
+//https://community.pega.com/department/Marketing/Creative/Style%20Guide/Pega%20Brand%20Guide2010-20.pdf
+
+body
+{
+	width:1200px;
+	background-color:white;
+	font-family: Arial;
+}
+
+#header
+{
+	height:100px;
+	background-color: #96C0E6;
+}
+
+#header #title
+{
+	font-size: 34px;
+	font-weight: bold;
+	color: white;
+	padding-left: 20px;
+	padding-top:20px;
+}
+
+#topmenu
+{
+	font-size:120%;	
+}
+
+a {
+	text-decoration:none;
+	color:#00457C;
+}
+
+a:hover {
+	text-decoration:none;
+	color:#00457C;
+}
+
+a:visited {
+	text-decoration:none; 
+	color:#00457C;
+}
+
+#menuright{
+	float:right;
+	width:100%;
+	text-align:right;
+	font-size:120%;
+	font-weight:bold;
+}
+
+#keyindicators{
+	float:right;
+	width:40%;
+	border:1px solid #8BD2F4;
+	height: 650px;
+	margin-top:10px;
+	padding:4px;
+}
+
+h2{
+	padding:0px;
+	margin:0px;
+	color:#00457C
+}
+
+h3{ 
+		padding:0px;
+	margin:0px;
+	color:#00457C
+}
+
+h1{
+	color:#00457C
+}
+
+#summary
+{
+	width:58%;
+}
+
+#timeline
+{
+	width:58%;
+}
+
+#alertcounts
+{
+	width:58%;
+}
+
+#rec
+{
+	font-size:125%;
+}
