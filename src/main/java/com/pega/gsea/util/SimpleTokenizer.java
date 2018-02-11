@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * chars present.
  * <li>This class does not recognize "comments"; the string is split on any instance
  * of the delimiter char, regardless of whether or not it is wrapped in quotes.
- *
+ * </ul>
  * @author Pat Reaney, Nov 2001
  * @version 1.0
  */
