@@ -26,6 +26,15 @@ buildscript {
 
 }
 
+dependencies {
+    warLibs 'org.ajoberstar:gradle-git:1.4.2'
+    warLibs 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
+    warLibs 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    warLibs group: 'net.sf.flexjson', name: 'flexjson', version: '3.3'
+    warLibs group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.3'
+
+}
+
 // must be set prior to 'release-opinion' plugin getting applied
 // as they are magically used behind the scenes.
 rootProject.ext.setProperty('release.stage', releaseStage.trim())
@@ -42,6 +51,12 @@ release {
     tagStrategy {
         generateMessage = { version -> "Version ${->project.version}" }
     }
+}
+
+apply plugin: 'war'
+war {
+    webInf { from "$rootDir//main/java" }
+    classpath configurations.warLibs
 }
 
 // Ensure the following tasks are run as part of releasing a new version.
