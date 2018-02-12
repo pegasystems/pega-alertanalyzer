@@ -8,6 +8,8 @@ import java.util.TimeZone;
 
 public class DateUtil {
 
+    private DateUtil(){}
+
     public static boolean isWithinSecs(AlertData a1, AlertData a2, int secs) {
         long deltaInSec = Math.abs(a1.getTheDate().getTime() - a2.getTheDate().getTime()) / 1000;
         if (deltaInSec > secs) {

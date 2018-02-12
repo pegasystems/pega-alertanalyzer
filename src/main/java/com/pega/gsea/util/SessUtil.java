@@ -7,6 +7,10 @@ import java.io.IOException;
 
 public class SessUtil {
 
+    private SessUtil(){
+
+    }
+
     public static boolean requireAlerts(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String invSession = request.getParameter("INVSESSION");
         if (invSession == null || !invSession.equals("TRUE")) {

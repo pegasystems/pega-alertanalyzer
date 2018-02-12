@@ -1,14 +1,18 @@
 package com.pega.gsea.util;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ParseAlertLog {
 
+    private ParseAlertLog(){}
+
     public static List<AlertData> getDataFromCSVFile(String file) throws Exception {
-        BufferedReader fr = new BufferedReader(new FileReader(file));
+        BufferedReader fr = Files.newBufferedReader(Paths.get(file), Charset.defaultCharset());
         return getDataFromCSVFile(fr);
     }
 
@@ -34,7 +38,7 @@ public class ParseAlertLog {
     }
 
     public static List<AlertData> getDataFromRawLog(String file) throws Exception {
-        BufferedReader fr = new BufferedReader(new FileReader(file));
+        BufferedReader fr = Files.newBufferedReader(Paths.get(file), Charset.defaultCharset());
         return getDataFromRawLog(fr);
     }
 
@@ -65,7 +69,7 @@ public class ParseAlertLog {
         String file = "C:\\Documents and Settings\\apapf\\My Documents\\Clients\\RX\\AlertLog.csv";
         String readline = null;
         try {
-            BufferedReader fr = new BufferedReader(new FileReader(file));
+            BufferedReader fr = Files.newBufferedReader(Paths.get(file), Charset.defaultCharset());
             readline = fr.readLine();
             readline = fr.readLine();
             while (readline != null) {

@@ -45,7 +45,7 @@ allprojects {
 
     tasks.withType(JavaCompile) {
         // Disabled '-Werror'
-        options.compilerArgs += ['-Xlint:-options','-XepAllDisabledChecksAsWarnings', '-Xep:Var:OFF']
+        options.compilerArgs += ['-Xlint:-options','-XepAllDisabledChecksAsWarnings', '-Xep:Var:OFF', '-Werror']
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }

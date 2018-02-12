@@ -4,6 +4,8 @@ import java.text.DecimalFormat;
 
 public class StringUtil {
 
+    private StringUtil(){}
+
     public static String formatDouble(Double input) {
         DecimalFormat df = new DecimalFormat("0.00");
         df.setMinimumFractionDigits(2);

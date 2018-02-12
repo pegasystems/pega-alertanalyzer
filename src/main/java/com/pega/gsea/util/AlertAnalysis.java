@@ -113,11 +113,11 @@ public class AlertAnalysis {
             for (String field : elapsedTimeFields) {
                 double time = getPalDouble(a.getPalInfo().get(field));
                 if (res.get(field) == null) {
-                    Double doubleTime = new Double(time);
+                    Double doubleTime = time;
                     res.put(field, doubleTime);
                 } else {
                     Double curVal = (Double) res.get(field);
-                    curVal = new Double(curVal.doubleValue() + time);
+                    curVal = Double.valueOf(curVal.doubleValue() + time);
                     res.put(field, curVal);
                 }
             }

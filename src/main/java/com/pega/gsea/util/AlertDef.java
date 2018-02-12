@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class AlertDef {
 
+    private AlertDef(){}
+
     static HashMap<String, String> alertDefMap = new HashMap<String, String>();
 
     static {

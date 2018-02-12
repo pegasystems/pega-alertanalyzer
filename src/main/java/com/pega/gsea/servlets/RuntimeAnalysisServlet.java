@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.Base64;
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class RuntimeAnalysisServlet extends javax.servlet.http.HttpServlet imple
     /* (non-Java-doc)
      * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
     }
@@ -38,6 +40,7 @@ public class RuntimeAnalysisServlet extends javax.servlet.http.HttpServlet imple
     /* (non-Java-doc)
      * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
@@ -69,15 +72,15 @@ public class RuntimeAnalysisServlet extends javax.servlet.http.HttpServlet imple
 
 
                 String authString = name + ":" + password;
-                byte[] authEncBytes = Base64.getEncoder().encode(authString.getBytes());
-                String authStringEnc = new String(authEncBytes);
+                byte[] authEncBytes = Base64.getEncoder().encode(authString.getBytes(Charset.defaultCharset()));
+                String authStringEnc = new String(authEncBytes, Charset.defaultCharset());
                 //System.out.println("Base64 encoded auth string: " + authStringEnc);
 
                 URL url = new URL(diagUrl);
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestProperty("Authorization", "Basic " + authStringEnc);
 
-                BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), Charset.defaultCharset()));
                 alerts = ParseAlertLog.getDataFromRawLog(in);
                 System.out.println("Total Memory " + Runtime.getRuntime().totalMemory());
                 System.out.println("Free Memory  " + Runtime.getRuntime().freeMemory());

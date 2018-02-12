@@ -6,8 +6,6 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 public class SQLFormatter {
-    static final String indentString = "    ";
-    static final String initial = "\n    ";
     private static final Set<String> BEGIN_CLAUSES = new HashSet();
     private static final Set<String> END_CLAUSES = new HashSet();
     private static final Set<String> LOGICAL = new HashSet();
