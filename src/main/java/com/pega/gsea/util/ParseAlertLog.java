@@ -60,9 +60,6 @@ public class ParseAlertLog {
     }
 
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         String file = "C:\\Documents and Settings\\apapf\\My Documents\\Clients\\RX\\AlertLog.csv";

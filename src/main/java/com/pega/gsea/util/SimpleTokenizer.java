@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * A class that tokenizes a string on a char delimiter.  This is meant to
  * be a substitute for the java.util.StringTokenizer, which has the property
  * of grouping consecutive delimiters together as if they were a single delimiter.
- * <p>This class treats consecutive delimiter chars as if they have an empty token
+ * This class treats consecutive delimiter chars as if they have an empty token
  * ("") between them.
- * <p>Important differences between this class and StringTokenizer:
+ * Important differences between this class and StringTokenizer:
  * <ul>
  * <li>This class does not support the return of delim chars.
  * <li>The delimiter is a single char, not a string of delim chars.
@@ -17,6 +17,7 @@ import java.util.ArrayList;
  * <li>This class does not recognize "comments"; the string is split on any instance
  * of the delimiter char, regardless of whether or not it is wrapped in quotes.
  * </ul>
+ *
  * @author Pat Reaney, Nov 2001
  * @version 1.0
  */
@@ -52,7 +53,7 @@ public class SimpleTokenizer {
      */
     public static void main(String[] args) {
         String str2 = "James\tIan\tKate\tBen\t\tHelen\tSimon";
-        SimpleTokenizer stok2 = new SimpleTokenizer(str2, '	');
+        SimpleTokenizer stok2 = new SimpleTokenizer(str2, '\t');
 
         System.out.println("Tokens in str2 = " + stok2.countTokens());
         while (stok2.hasMoreTokens()) {

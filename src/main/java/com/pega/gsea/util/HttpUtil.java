@@ -38,6 +38,7 @@ public class HttpUtil {
             wr.close();
             rd.close();
         } catch (Exception e) {
+            // TODO handle this exception
         }
         return ret.toString();
     }

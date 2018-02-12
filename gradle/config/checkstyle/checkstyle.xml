@@ -158,7 +158,7 @@
             <!-- property name="allowedAbbreviationLength" value="1"/ -->
         </module>
         <module name="OverloadMethodsDeclarationOrder"/>
-        <module name="VariableDeclarationUsageDistance"/>
+        <!--module name="VariableDeclarationUsageDistance"/-->
         <!-- module name="CustomImportOrder">
             <property name="sortImportsInGroupAlphabetically" value="true"/>
             <property name="customImportOrderRules" value="STATIC###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE"/>
@@ -194,6 +194,7 @@
             <property name="allowedAnnotations" value="Override, Test"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
             <property name="ignoreMethodNamesRegex" value=".*(create|test).*"/>
+            <property name="allowMissingJavadoc" value="true"/>
         </module>
         <module name="MethodName">
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>

@@ -119,7 +119,8 @@ public class AlertData {
         //System.out.println("Processing Alert Line : "+line);
         //System.out.println("Using split token : \\\u002A");
         String[] strTest;
-        strTest = line.split("\\\u002A");
+
+        strTest = line.split("\\*");
 
         int numTokens = strTest.length;
         //System.out.println("Number of split Tokens (index is 0 based) >>> "+numTokens);
