@@ -5,22 +5,24 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
-        maven { 
-            url artifactoryURL 
+        maven {
+            url artifactoryURL
             credentials {
                 username = artifactoryUser
                 password = artifactoryPassword
             }
         }
     }
+
     dependencies {
         classpath 'org.ajoberstar:gradle-git:1.4.2'
         classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
         classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
     }
+
 }
 
-// must be set prior to 'release-opinion' plugin getting applied 
+// must be set prior to 'release-opinion' plugin getting applied
 // as they are magically used behind the scenes.
 rootProject.ext.setProperty('release.stage', releaseStage.trim())
 rootProject.ext.setProperty('release.scope', releaseScope.trim())
