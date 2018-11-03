@@ -24,4 +24,6 @@ Can be sourced from Artifactory/Bintray like so:
 
 * [Release Process](https://github.com/pegasystems/pega-alertanalyzer/blob/master/docs/RELEASE_PROCESS.md)
 
-
+The project gets deployed as a WAR file in an application server , typically Apache Tomcat.
+In order to generate the deployable war file , execute the gradle build command from the project root folder. Once the build completes , the pega-alertanalyzer-0.0.1-SNAPSHOT.war would be generated in the 
+build/libs folder .In order to deploy this WAR file , one can directly drop it into the webapps folder inside Apache Tomcat or a docker image can be created and the container instance can be forked to deploy the WAR file.The docker file is placed on the root directory of the project.
