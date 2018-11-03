@@ -34,6 +34,6 @@ application server.
 
 ```
 > docker build -t smartanalyzer .
-> docker run -p 8080:8888 smartanalyzer
+> docker run -p 8888:8080 smartanalyzer
 // Navigate to localhost:8888/pega-alertanalyzer-0.0.1-SNAPSHOT
 ```
