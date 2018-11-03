@@ -33,6 +33,7 @@ This project includes a Dockerfile which allows it to be executed in a Docker co
 application server.
 
 ```
+> ./gradlew build
 > docker build -t smartanalyzer .
 > docker run -p 8888:8080 smartanalyzer
 // Navigate to localhost:8888/pega-alertanalyzer-0.0.1-SNAPSHOT
