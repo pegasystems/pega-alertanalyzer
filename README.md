@@ -25,7 +25,7 @@ Can be sourced from Artifactory/Bintray like so:
 * [Release Process](https://github.com/pegasystems/pega-alertanalyzer/blob/master/docs/RELEASE_PROCESS.md)
 
 ## Building
-This project generates a war file which can be deployed to an application server. The war file can be generated
+This project generates a war file which can be deployed to an application server, typically Tomcat. The war file can be generated
 using the `./gradlew build` command. The resulting file is placed in the `build/libs` folder
 
 ## Running with Docker
