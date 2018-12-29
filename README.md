@@ -38,3 +38,25 @@ application server.
 > docker run -p 8888:8080 smartanalyzer
 // Navigate to localhost:8888/pega-alertanalyzer-0.0.1-SNAPSHOT
 ```
+
+## Usage
+
+1. Deploy the war file on local application server viz. Tomcat and hit the URL :
+
+![image](https://user-images.githubusercontent.com/83574/50541692-04bdb280-0b79-11e9-94a4-98b2c52a4e3b.png)
+
+2. On the next screen upload PegaRULES Alert file and select appropriate timezone.
+
+![image](https://user-images.githubusercontent.com/83574/50541693-0a1afd00-0b79-11e9-9405-49dc63d5479c.png)
+
+![image](https://user-images.githubusercontent.com/83574/50541695-0dae8400-0b79-11e9-9ff3-cd96fb353fab.png)
+
+3. You’ll be presented with a dashboard with Summary, Recommendation, Key indicators.
+
+![image](https://user-images.githubusercontent.com/83574/50541696-11420b00-0b79-11e9-85c1-106c018c2c2d.png)
+
+4. Drilldown into various categories and explore the aggregated data to your advantage.
+
+![image](https://user-images.githubusercontent.com/83574/50541698-14d59200-0b79-11e9-99c4-099d94c7e7f1.png)
+
+![image](https://user-images.githubusercontent.com/83574/50541690-f1124c00-0b78-11e9-8371-92e442966456.png)
