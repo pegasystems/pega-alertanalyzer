@@ -41,7 +41,7 @@ application server.
 
 ## Usage
 
-1. Deploy the war file on local application server viz. Tomcat and hit the URL :
+1. Deploy the war file on local application server viz. Tomcat and hit the URL http://localhost:8888/pega-alertanalyzer-0.0.1-SNAPSHOT (Hostname and port may vary based upon configuration)
 
 ![image](https://user-images.githubusercontent.com/83574/50541692-04bdb280-0b79-11e9-94a4-98b2c52a4e3b.png)
 
