@@ -24,4 +24,17 @@ Can be sourced from Artifactory/Bintray like so:
 
 * [Release Process](https://github.com/pegasystems/pega-alertanalyzer/blob/master/docs/RELEASE_PROCESS.md)
 
+## Building
+This project generates a war file which can be deployed to an application server, typically Tomcat. The war file can be generated
+using the `./gradlew build` command. The resulting file is placed in the `build/libs` folder
 
+## Running with Docker
+This project includes a Dockerfile which allows it to be executed in a Docker container without having to install an
+application server.
+
+```
+> ./gradlew build
+> docker build -t smartanalyzer .
+> docker run -p 8888:8080 smartanalyzer
+// Navigate to localhost:8888/pega-alertanalyzer-0.0.1-SNAPSHOT
+```
